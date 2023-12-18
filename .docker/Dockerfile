@@ -43,6 +43,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     ros-$ROS_DISTRO-kdl-conversions \
     ros-$ROS_DISTRO-image-geometry \
     ros-$ROS_DISTRO-diagnostic-updater \
+    ros-$ROS_DISTRO-robot-state-publisher \
     ros-$ROS_DISTRO-kobuki-driver \
     ros-$ROS_DISTRO-kobuki-ftdi \
     ros-$ROS_DISTRO-kobuki-core \
