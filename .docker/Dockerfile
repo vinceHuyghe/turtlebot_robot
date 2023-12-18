@@ -69,7 +69,7 @@ RUN ["/bin/bash", "-c", "source /opt/ros/$ROS_DISTRO/setup.bash &&\
     "]
 
 RUN ["/bin/bash", "-c", "cp /dev_ws/src/.docker/entrypoint.sh / && chmod 777 /entrypoint.sh"]
-RUN ["/bin/bash", "-c", "cp /dev_ws/src/.docker/setup.bash / && chmod 777 /setup.bash"]
+RUN ["/bin/bash", "-c", "cp /dev_ws/src/.docker/setup.bash / && chmod 777 /dev_ws/setup.bash"]
 ENTRYPOINT ["bash", "/entrypoint.sh" ]
 
 CMD ["bash"]
