@@ -42,7 +42,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     ros-$ROS_DISTRO-ecl-streams \
     ros-$ROS_DISTRO-kdl-conversions \
     ros-$ROS_DISTRO-image-geometry \
-    ros-$ROS_DISTRO-diagnostic-updater \
+    ros-$ROS_DISTRO-diagnostics \
     ros-$ROS_DISTRO-robot-state-publisher \
     ros-$ROS_DISTRO-kobuki-driver \
     ros-$ROS_DISTRO-kobuki-ftdi \
@@ -69,6 +69,7 @@ RUN ["/bin/bash", "-c", "source /opt/ros/$ROS_DISTRO/setup.bash &&\
     "]
 
 RUN ["/bin/bash", "-c", "cp /dev_ws/src/.docker/entrypoint.sh / && chmod 777 /entrypoint.sh"]
+RUN ["/bin/bash", "-c", "cp /dev_ws/src/.docker/setup.bash / && chmod 777 /setup.bash"]
 ENTRYPOINT ["bash", "/entrypoint.sh" ]
 
 CMD ["bash"]
