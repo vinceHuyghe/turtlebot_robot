@@ -55,6 +55,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     ros-$ROS_DISTRO-amcl \
     ros-$ROS_DISTRO-navigation \
     ros-$ROS_DISTRO-map-server \
+    ros-$ROS_DISTRO-image-transport \
+    ros-$ROS_DISTRO-image-transport-plugins \
+    ros-$ROS_DISTRO-compressed-image-transport \
+    ros-$ROS_DISTRO-theora-image-transport \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
